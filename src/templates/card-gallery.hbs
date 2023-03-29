@@ -1,17 +1,21 @@
-<div class="photo-card">
-  <img src="" alt="" loading="lazy" />
-  <div class="info">
-    <p class="info-item">
-      <b>Likes</b>
+{{#earch this}}
+<div class='photo-card'>
+  <a href="{{this.largeImageURL}}">
+  <img src='{{this.webformatURL}}' alt='{{this.tags}}' loading='lazy' />
+  </a>
+  <div class='info'>
+    <p class='info-item'>
+      <b>Likes {{this.likes}} </b>
     </p>
-    <p class="info-item">
-      <b>Views</b>
+    <p class='info-item'>
+      <b>Views {{this.views}} </b>
     </p>
-    <p class="info-item">
-      <b>Comments</b>
+    <p class='info-item'>
+      <b>Comments {{this.comments}} </b>
     </p>
-    <p class="info-item">
-      <b>Downloads</b>
+    <p class='info-item'>
+      <b>Downloads {{this.downloads}} </b>
     </p>
   </div>
 </div>
+{{/each}}
