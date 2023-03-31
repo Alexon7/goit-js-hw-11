@@ -8,7 +8,7 @@ export class PixabayApi {
 
   constructor() {
     this.page = null;
-    this.per_pege = 40;
+    this.per_page = 40;
     this.searchQuery = null;
   }
 
@@ -17,11 +17,11 @@ export class PixabayApi {
       params: {
         key: this.#API_KEY,
         q: this.searchQuery,
-        image_type: this.fetchPhotos,
-        orientation: horizontal,
-        safesearch: true,
         page: this.page,
-        per_pege: this.per_pege,
+        per_page: this.per_page,
+        image_type: 'photo',
+        orientation: 'horizontal',
+        safesearch: true,
       },
     };
 
