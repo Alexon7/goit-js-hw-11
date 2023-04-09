@@ -52,6 +52,7 @@ async function onSearchForm(e) {
           timeout: 2500,
         }
       );
+
       return;
     }
 
@@ -113,6 +114,7 @@ const observer = new IntersectionObserver(
               timeout: 2500,
             }
           );
+          observer.unobserve(targetEl);
           return;
         }
       } catch (err) {
