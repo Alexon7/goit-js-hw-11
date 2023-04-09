@@ -114,7 +114,14 @@ const observer = new IntersectionObserver(
               timeout: 2500,
             }
           );
-          observer.unobserve(targetEl);
+
+          if (pixabayApi.page === totalPages) {
+            Notify.info(
+              "We're sorry, but you've reached the end of search results."
+            );
+            observer.unobserve(targetEl);
+          }
+
           return;
         }
       } catch (err) {
