@@ -114,12 +114,9 @@ const observer = new IntersectionObserver(
               timeout: 2500,
             }
           );
-
-          if (pixabayApi.page === totalPages) {
-            Notify.info(
-              "We're sorry, but you've reached the end of search results."
-            );
-            observer.unobserve(targetEl);
+          if (observer) {
+            observer.disconnect();
+            // Спостерігач існує, його відключено
           }
 
           return;
